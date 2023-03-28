@@ -1,0 +1,22 @@
+* {
+    font-family: 'Righteous', cursive;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #CF2B2B;
+    height: 92px;
+}
+
+nav > div h1 {
+    font-size: 44px ;
+}
+
+nav div p {
+    font-size: 18px;
+}
