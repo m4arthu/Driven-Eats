@@ -11,7 +11,7 @@ function seletionPratos(id) {
   let prato1 = document.getElementById(id)
   let pratoid = prato1.id
   if (pratoId === "") {
-    prato += "Frango Yin Yang"
+    prato += "Coquinha-gelada"
     pratoId = pratoid
     prato1.style.border = "2px solid green"
   } else {
@@ -23,6 +23,7 @@ function seletionPratos(id) {
   if (prato != "" && sobremesa != "" && bebida != "") {
     button.removeAttribute("disabled")
     button.style.backgroundColor = "green"
+    button.innerHTML = "<p>Fechar pedido</p>"
   }
 }
 
@@ -43,6 +44,7 @@ function selectionBebidas(id) {
   if (prato != "" && sobremesa != "" && bebida != "") {
     button.removeAttribute("disabled")
     button.style.backgroundColor = "green"
+    button.innerHTML = "<p>Fechar pedido</p>"
   }
 }
 
@@ -64,6 +66,7 @@ function selectionDessert(id) {
   if (prato != "" && sobremesa != "" && bebida != "") {
     button.removeAttribute("disabled")
     button.style.backgroundColor = "green"
+    button.innerHTML = "<p>Fechar pedido</p>"
   }
 
 }
