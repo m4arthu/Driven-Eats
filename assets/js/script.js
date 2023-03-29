@@ -1,52 +1,80 @@
-var lista = []
+var prato = ""
+var pratoId = ""
+var bebida = ""
+var bebidaId = ""
+var sobremesa = ""
+var sobremesaId = ""
 
-function selection(id) {
-    let item = document.getElementById(id)
-    let itemn = item.id.match(/\d+/)[0] // pegando numer do elemento
 
-    let pedido = item.innerText.toString()
+function seletionPratos(id) {
+  let button = document.getElementById("checkout-button")
+  let prato1 = document.getElementById(id)
+  let pratoid = prato1.id
+  if (pratoId === "") {
+    prato += "Frango Yin Yang"
+    pratoId = pratoid
+    prato1.style.border = "2px solid green"
+  } else {
+    let prato2 = document.getElementById(pratoId)
+    prato2.style.border = "none"
+    prato1.style.border = "1px solid green"
+    pratoId = pratoid
+  }
+  if (prato != "" && sobremesa != "" && bebida != "") {
+    button.removeAttribute("disabled")
+    button.style.backgroundColor = "green"
+  }
+}
 
-    if (item.style.border === '1px solid black') {
-        
-        lista.splice(lista.indexOf(item.innerText),1)
-        item.style.border = "none"
+function selectionBebidas(id) {
+  let button = document.getElementById("checkout-button")
+  let bebida1 = document.getElementById(id)
+  let bebidaid = bebida1.id
+  if (bebidaId === "") {
+    bebida += "Coquinha-gelada"
+    bebidaId = bebidaid
+    bebida1.style.border = "2px solid green"
+  } else {
+    let bebida2 = document.getElementById(bebidaId)
+    bebida2.style.border = "none"
+    bebida1.style.border = "1px solid green"
+    bebidaId = bebidaid
+  }
+  if (prato != "" && sobremesa != "" && bebida != "") {
+    button.removeAttribute("disabled")
+    button.style.backgroundColor = "green"
+  }
+}
 
-        if (lista.length < 3) {
-            let button = document.getElementById('checkout-button')
-            let elemento = document.getElementById('checkout-button')
+function selectionDessert(id) {
+  let button = document.getElementById("checkout-button")
+  let sobremesa1 = document.getElementById(id)
+  let sobremesaid = sobremesa1.id
+  if (sobremesaId === "") {
+    sobremesa += "Pudim"
+    sobremesaId = sobremesaid
+    sobremesa1.style.border = "2px solid green"
+  } else {
+    let sobremesa2 = document.getElementById(sobremesaId)
+    sobremesa2.style.border = "none"
+    sobremesa1.style.border = "1px solid green"
+    sobremesaId = sobremesaid
+  }
 
-            elemento.innerHTML = "<p>fechar pedido</p>"
-            elemento.style.backgroundColor = "#CBCBCB"
+  if (prato != "" && sobremesa != "" && bebida != "") {
+    button.removeAttribute("disabled")
+    button.style.backgroundColor = "green"
+  }
 
-            button.setAttribute("disabled", true)
-        }
-    } else {
-        lista.push(pedido)
-        item.style.border = '1px solid green'
-    }
-
-    if (lista.length >= 3) {
-        let button = document.getElementById('checkout-button')
-        let elemento = document.getElementById('checkout-button')
-
-        elemento.innerHTML = "<p>clique aqui para finalizar</p>"
-        elemento.style.backgroundColor = "green"
-
-        button.removeAttribute("disabled")
-
-    }
-
-    console.log(lista)
 }
 
 function send() {
- var pedidos =""
-    for (let i = 0; i < lista.length; i++) {
-       let pedido = lista[i]
-        pedidos += pedido   
-    }
+  let pedido =
+    `Olá gostaria fazer um pedido:\n-prato:${prato}\n-bebida:${bebida}\n-sobremesa:${sobremesa}\n-total: R$ 27.70`
 
-  window.open(`https://api.whatsapp.com/send?phone=5599984592679&text=${pedidos}`)
+  let message = encodeURIComponent(pedido)
+
+  window.open(`https://api.whatsapp.com/send?phone=5599984592679&text=${message}`)
 
 }
 
