@@ -15,14 +15,14 @@ function selection(id) {
             let button = document.getElementById('checkout-button')
             let elemento = document.getElementById('checkout-button')
 
-            elemento.innerHTML = "<p>selecione 3 produtos para fechar o pedido</p>"
+            elemento.innerHTML = "<p>fechar pedido</p>"
             elemento.style.backgroundColor = "#CBCBCB"
 
             button.setAttribute("disabled", true)
         }
     } else {
         lista.push(pedido)
-        item.style.border = '1px solid black'
+        item.style.border = '1px solid green'
     }
 
     if (lista.length >= 3) {
