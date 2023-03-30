@@ -26,7 +26,7 @@ function seletionPratos(id) {
     check1.classList.remove("d-none")
   } else {
     let prato2 = document.getElementById(pratoId)
-    let check2 = document.getElementById(check)
+    let check2 = document.getElementById(checkp)
     prato2.style.border = "none"
     prato1.style.border = "4px solid green"
     pratoId = pratoid
@@ -60,7 +60,7 @@ function selectionDessert(id) {
     check1.classList.remove("d-none")
   } else {
     let dessert2 = document.getElementById(dessertId)
-    let check2 = document.getElementById(check)
+    let check2 = document.getElementById(checkb)
     dessert2.style.border = "none"
     dessert1.style.border = "4px solid green"
     dessertId = dessertid
@@ -93,7 +93,7 @@ function selectionBebidas(id) {
     check1.classList.remove("d-none")
   } else {
     let bebida2 = document.getElementById(bebidaId)
-    let check2 = document.getElementById(check)
+    let check2 = document.getElementById(checkd)
     bebida2.style.border = "none"
     bebida1.style.border = "4px solid green"
     bebidaId = bebidaid
