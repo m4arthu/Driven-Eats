@@ -5,7 +5,9 @@ var bebidaId = ""
 var dessert = ""
 var dessertId = ""
 var total = []
-var check = ""
+var checkp = ""
+var checkb = ""
+var checkd = ""
 
 function seletionPratos(id) {
   let button = document.getElementById("checkout-button")
@@ -19,7 +21,7 @@ function seletionPratos(id) {
     total.push(preço)
     prato += "Frango Yin Yang"
     pratoId = pratoid
-    check = check1.id
+    checkp = check1.id
     prato1.style.border = "4px solid green"
     check1.classList.remove("d-none")
   } else {
@@ -28,7 +30,7 @@ function seletionPratos(id) {
     prato2.style.border = "none"
     prato1.style.border = "4px solid green"
     pratoId = pratoid
-    check = check1.id
+    checkp = check1.id
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
     
@@ -53,7 +55,7 @@ function selectionDessert(id) {
     total.push(preço)
     dessert += "Frango Yin Yang"
     dessertId = dessertid
-    check = check1.id
+    checkb = check1.id
     dessert1.style.border = "4px solid green"
     check1.classList.remove("d-none")
   } else {
@@ -62,7 +64,7 @@ function selectionDessert(id) {
     dessert2.style.border = "none"
     dessert1.style.border = "4px solid green"
     dessertId = dessertid
-    check = check1.id
+    checkb = check1.id
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
     
@@ -86,7 +88,7 @@ function selectionBebidas(id) {
     total.push(preço)
     bebida += "Frango Yin Yang"
     bebidaId = bebidaid
-    check = check1.id
+    checkd = check1.id
     bebida1.style.border = "4px solid green"
     check1.classList.remove("d-none")
   } else {
@@ -95,7 +97,7 @@ function selectionBebidas(id) {
     bebida2.style.border = "none"
     bebida1.style.border = "4px solid green"
     bebidaId = bebidaid
-    check = check1.id
+    checkd = check1.id
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
     
