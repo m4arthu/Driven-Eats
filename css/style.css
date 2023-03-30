@@ -3,7 +3,6 @@
 }
 
 ::-webkit-scrollbar {
-    font-family: 'Righteous', cursive;
     display: none;
 }
 
@@ -12,10 +11,12 @@
 }
 
 body {
+    font-family: 'Righteous', cursive;
     background-color: #E5E5E5;
 }
 
 nav {
+    font-family: 'Righteous', cursive;
     top: 0;
     position: fixed;
     display: flex;
@@ -27,6 +28,7 @@ nav {
 }
 
 nav div {
+    font-family: 'Righteous', cursive;
     margin-left: 25px;
 }
 nav > div h1 {
@@ -34,18 +36,21 @@ nav > div h1 {
 }
 
 nav div p {
+    font-family: 'Righteous', cursive;
     margin-left: 20px;
     margin-bottom: 20px;
     font-size: 18px;
 }
 
 h1 {
+    font-family: 'Righteous', cursive;
     margin-left: 20px;
     margin-top: 20px;
     font-size: 28px;
 }
 
 .container {
+    font-family: 'Righteous', cursive;
     margin-top: 132px;
     margin-bottom: 122px;
 }
@@ -53,13 +58,14 @@ h1 {
 .items {
     margin-top: 20px;
     margin-left: 20px;
-    gap: 15px;
+    gap: 20px;
     display: flex;
     overflow-x: auto;
 }
 
 
 .item {
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.7);
     background-color: #ffff;
     width: 162px;
     display: flex;
