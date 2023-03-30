@@ -16,6 +16,7 @@ body {
 }
 
 nav {
+    z-index: 1;
     font-family: 'Righteous', cursive;
     top: 0;
     position: fixed;
