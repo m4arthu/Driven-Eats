@@ -19,11 +19,11 @@ function seletionPratos(id) {
     total.push(preço)
     prato += "Frango Yin Yang"
     pratoId = pratoid
-    prato1.style.border = "2px solid green"
+    prato1.style.border = "3px solid green"
   } else {
     let prato2 = document.getElementById(pratoId)
     prato2.style.border = "none"
-    prato1.style.border = "1px solid green"
+    prato1.style.border = "3px solid green"
     pratoId = pratoid
   }
   if (prato != "" && sobremesa != "" && bebida != "") {
@@ -44,11 +44,11 @@ function selectionBebidas(id) {
     total.push(preço)
     bebida += "Coquinha-gelada"
     bebidaId = bebidaid
-    bebida1.style.border = "2px solid green"
+    bebida1.style.border = "3px solid green"
   } else {
     let bebida2 = document.getElementById(bebidaId)
     bebida2.style.border = "none"
-    bebida1.style.border = "1px solid green"
+    bebida1.style.border = "3px solid green"
     bebidaId = bebidaid
   }
   if (prato != "" && sobremesa != "" && bebida != "") {
@@ -69,11 +69,11 @@ function selectionDessert(id) {
     total.push(preço)
     sobremesa += "Pudim"
     sobremesaId = sobremesaid
-    sobremesa1.style.border = "2px solid green"
+    sobremesa1.style.border = "3px solid green"
   } else {
     let sobremesa2 = document.getElementById(sobremesaId)
     sobremesa2.style.border = "none"
-    sobremesa1.style.border = "1px solid green"
+    sobremesa1.style.border = "3px solid green"
     sobremesaId = sobremesaid
   }
 
