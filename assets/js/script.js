@@ -19,7 +19,7 @@ function seletionPratos(id) {
 
   if (pratoId === "") {
     total.push(preço)
-    prato += "Coca-cola"
+    prato += "Frango Yin Yang"
     pratoId = pratoid
     checkp = check1.id
     prato1.style.border = "4px solid green"
@@ -86,7 +86,7 @@ function selectionBebidas(id) {
 
   if (bebidaId === "") {
     total.push(preço)
-    bebida += "Frango Yin Yang"
+    bebida += "Coca-cola"
     bebidaId = bebidaid
     checkd = check1.id
     bebida1.style.border = "4px solid green"
