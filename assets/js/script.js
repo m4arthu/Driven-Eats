@@ -108,6 +108,18 @@ function selectionBebidas(id) {
   }
 }
 
+function openModal() {
+    let  modal = document.querySelector("#confirm-menu")
+
+    modal.classList.remove("d-none")
+}
+
+function closeModal() {
+  let  modal = document.querySelector("#confirm-menu")
+
+  modal.classList.add("d-none")
+}
+
 function send() {
 
   let  TOTAL = 0 
@@ -120,7 +132,7 @@ function send() {
 
     var celular = "5599984592679";
     
-    var texto = `Olá gostaria de fazer um pedido: \n -prato: ${prato}  \n -bebida: ${bebida} \n -sobremesa: ${sobremesa} \n -total: R$${TOTAL}0`
+    var texto = `Olá gostaria de fazer um pedido: \n -prato: ${prato}  \n -bebida: ${bebida} \n -sobremesa: ${dessert} \n -total: R$${TOTAL}0`
     
     texto = window.encodeURIComponent(texto);
   
