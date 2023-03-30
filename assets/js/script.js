@@ -2,10 +2,10 @@ var prato = ""
 var pratoId = ""
 var bebida = ""
 var bebidaId = ""
-var sobremesa = ""
-var sobremesaId = ""
+var dessert = ""
+var dessertId = ""
 var total = []
-
+var check = ""
 
 function seletionPratos(id) {
   let button = document.getElementById("checkout-button")
@@ -13,45 +13,28 @@ function seletionPratos(id) {
   let pratoid = prato1.id
   let numid = pratoid.match(/\d+/)[0]
   let preço =(document.getElementById(`preço${numid}`).innerText)
-
+  let check1 = document.getElementById(`itemcheck${numid}`)
 
   if (pratoId === "") {
     total.push(preço)
     prato += "Frango Yin Yang"
     pratoId = pratoid
-    prato1.style.border = "3px solid green"
+    check = check1.id
+    prato1.style.border = "4px solid green"
+    check1.classList.remove("d-none")
   } else {
     let prato2 = document.getElementById(pratoId)
+    let check2 = document.getElementById(check)
     prato2.style.border = "none"
-    prato1.style.border = "3px solid green"
+    prato1.style.border = "4px solid green"
     pratoId = pratoid
+    check = check1.id
+    check1.classList.remove("d-none")
+    check2.classList.add("d-none")
+    
   }
-  if (prato != "" && sobremesa != "" && bebida != "") {
-    button.removeAttribute("disabled")
-    button.style.backgroundColor = "green"
-    button.innerHTML = "<p>Fechar pedido</p>"
-  }
-}
 
-function selectionBebidas(id) {
-  let button = document.getElementById("checkout-button")
-  let bebida1 = document.getElementById(id)
-  let bebidaid = bebida1.id
-  let numid = bebidaid.match(/\d+/)[0] 
-  let preço =(document.getElementById(`preço${numid}`).innerText)
-
-  if (bebidaId === "") {
-    total.push(preço)
-    bebida += "Coquinha-gelada"
-    bebidaId = bebidaid
-    bebida1.style.border = "3px solid green"
-  } else {
-    let bebida2 = document.getElementById(bebidaId)
-    bebida2.style.border = "none"
-    bebida1.style.border = "3px solid green"
-    bebidaId = bebidaid
-  }
-  if (prato != "" && sobremesa != "" && bebida != "") {
+  if (prato != "" && dessert != "" && bebida != "") {
     button.removeAttribute("disabled")
     button.style.backgroundColor = "green"
     button.innerHTML = "<p>Fechar pedido</p>"
@@ -60,25 +43,65 @@ function selectionBebidas(id) {
 
 function selectionDessert(id) {
   let button = document.getElementById("checkout-button")
-  let sobremesa1 = document.getElementById(id)
-  let sobremesaid = sobremesa1.id
-  let numid = sobremesaid.match(/\d+/)[0]
+  let dessert1 = document.getElementById(id)
+  let dessertid = dessert1.id
+  let numid = dessertid.match(/\d+/)[0]
   let preço =(document.getElementById(`preço${numid}`).innerText)
+  let check1 = document.getElementById(`itemcheck${numid}`)
 
-  if (sobremesaId === "") {
+  if (dessertId === "") {
     total.push(preço)
-    sobremesa += "Pudim"
-    sobremesaId = sobremesaid
-    sobremesa1.style.border = "3px solid green"
+    dessert += "Frango Yin Yang"
+    dessertId = dessertid
+    check = check1.id
+    dessert1.style.border = "4px solid green"
+    check1.classList.remove("d-none")
   } else {
-    let sobremesa2 = document.getElementById(sobremesaId)
-    sobremesa2.style.border = "none"
-    sobremesa1.style.border = "3px solid green"
-    sobremesaId = sobremesaid
+    let dessert2 = document.getElementById(dessertId)
+    let check2 = document.getElementById(check)
+    dessert2.style.border = "none"
+    dessert1.style.border = "4px solid green"
+    dessertId = dessertid
+    check = check1.id
+    check1.classList.remove("d-none")
+    check2.classList.add("d-none")
+    
   }
 
+  if (prato != "" && dessert != "" && bebida != "") {
+    button.removeAttribute("disabled")
+    button.style.backgroundColor = "green"
+    button.innerHTML = "<p>Fechar pedido</p>"
+  }
+}
+function selectionBebidas(id) {
+  let button = document.getElementById("checkout-button")
+  let bebida1 = document.getElementById(id)
+  let bebidaid = bebida1.id
+  let numid = bebidaid.match(/\d+/)[0]
+  let preço =(document.getElementById(`preço${numid}`).innerText)
+  let check1 = document.getElementById(`itemcheck${numid}`)
 
-  if (prato != "" && sobremesa != "" && bebida != "") {
+  if (bebidaId === "") {
+    total.push(preço)
+    bebida += "Frango Yin Yang"
+    bebidaId = bebidaid
+    check = check1.id
+    bebida1.style.border = "4px solid green"
+    check1.classList.remove("d-none")
+  } else {
+    let bebida2 = document.getElementById(bebidaId)
+    let check2 = document.getElementById(check)
+    bebida2.style.border = "none"
+    bebida1.style.border = "4px solid green"
+    bebidaId = bebidaid
+    check = check1.id
+    check1.classList.remove("d-none")
+    check2.classList.add("d-none")
+    
+  }
+
+  if (prato != "" && dessert != "" && bebida != "") {
     button.removeAttribute("disabled")
     button.style.backgroundColor = "green"
     button.innerHTML = "<p>Fechar pedido</p>"
