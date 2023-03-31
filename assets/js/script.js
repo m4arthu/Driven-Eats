@@ -65,12 +65,12 @@ function selectionDessert(id) {
     total.push(preço)
     dessert += "Pudim"
     dessertId = dessertid
-    checkp = check1.id
+    checkd = check1.id
     dessert1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else if(dessertId !== dessert1 && checkp !== check1.id){
+  } else if(dessertId !== dessert1 && checkd !== check1.id){
     let dessert2 = document.getElementById(dessertId)
-    let check2 = document.getElementById(checkp)
+    let check2 = document.getElementById(checkd)
 
     if (total.indexOf(document.getElementById(`preço${dessertId.match(/\d+/)[0]}`).innerText) !== -1) {
       total.splice(total.indexOf(document.getElementById(`preço${dessertId.match(/\d+/)[0]}`).innerText),1)
@@ -80,7 +80,7 @@ function selectionDessert(id) {
     dessert2.style.border = "none"
     dessert1.style.border = "4px solid green"
     dessertId = dessertid
-    checkp = check1.id
+    checkd = check1.id
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
 
@@ -105,12 +105,12 @@ function selectionBebidas(id) {
     total.push(preço)
     bebida += "Coca-Cola"
     bebidaId = bebidaid
-    checkp = check1.id
+    checkb = check1.id
     bebida1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else if(bebidaId !== bebida1 && checkp !== check1.id){
+  } else if(bebidaId !== bebida1 && checkb !== check1.id){
     let bebida2 = document.getElementById(bebidaId)
-    let check2 = document.getElementById(checkp)
+    let check2 = document.getElementById(checkb)
 
     if (total.indexOf(document.getElementById(`preço${bebidaId.match(/\d+/)[0]}`).innerText) !== -1) {
       total.splice(total.indexOf(document.getElementById(`preço${bebidaId.match(/\d+/)[0]}`).innerText),1)
@@ -120,7 +120,7 @@ function selectionBebidas(id) {
     bebida2.style.border = "none"
     bebida1.style.border = "4px solid green"
     bebidaId = bebidaid
-    checkp = check1.id
+    checkb = check1.id
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
 
