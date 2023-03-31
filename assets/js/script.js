@@ -8,6 +8,8 @@ var total = []
 var checkp = ""
 var checkb = ""
 var checkd = ""
+var username 
+var endereco
 
 function seletionPratos(id) {
   let button = document.getElementById("checkout-button")
@@ -25,7 +27,7 @@ function seletionPratos(id) {
     checkp = check1.id
     prato1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else {
+  } else if(pratoId !== prato1 && checkp !== check1.id){
     let prato2 = document.getElementById(pratoId)
     let check2 = document.getElementById(checkp)
 
@@ -41,7 +43,7 @@ function seletionPratos(id) {
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
 
-  }
+  } 
 
   if (prato != "" && dessert != "" && bebida != "") {
     button.removeAttribute("disabled")
@@ -63,26 +65,26 @@ function selectionDessert(id) {
     total.push(preço)
     dessert += "Pudim"
     dessertId = dessertid
-    checkd = check1.id
+    checkp = check1.id
     dessert1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else {
+  } else if(dessertId !== dessert1 && checkp !== check1.id){
     let dessert2 = document.getElementById(dessertId)
-    let check2 = document.getElementById(checkd)
+    let check2 = document.getElementById(checkp)
 
     if (total.indexOf(document.getElementById(`preço${dessertId.match(/\d+/)[0]}`).innerText) !== -1) {
-      total.splice(total.indexOf(document.getElementById(`preço${dessertId.match(/\d+/)[0]}`).innerText), 1)
+      total.splice(total.indexOf(document.getElementById(`preço${dessertId.match(/\d+/)[0]}`).innerText),1)
       total.push(preço)
     }
 
     dessert2.style.border = "none"
     dessert1.style.border = "4px solid green"
     dessertId = dessertid
-    checkd = check1.id
+    checkp = check1.id
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
 
-  }
+  } 
 
   if (prato != "" && dessert != "" && bebida != "") {
     button.removeAttribute("disabled")
@@ -101,28 +103,28 @@ function selectionBebidas(id) {
   if (bebidaId === "") {
 
     total.push(preço)
-    bebida += "Coca-cola"
+    bebida += "Coca-Cola"
     bebidaId = bebidaid
-    checkb = check1.id
+    checkp = check1.id
     bebida1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else {
+  } else if(bebidaId !== bebida1 && checkp !== check1.id){
     let bebida2 = document.getElementById(bebidaId)
-    let check2 = document.getElementById(checkb)
+    let check2 = document.getElementById(checkp)
 
     if (total.indexOf(document.getElementById(`preço${bebidaId.match(/\d+/)[0]}`).innerText) !== -1) {
-      total.splice(total.indexOf(document.getElementById(`preço${bebidaId.match(/\d+/)[0]}`).innerText), 1)
+      total.splice(total.indexOf(document.getElementById(`preço${bebidaId.match(/\d+/)[0]}`).innerText),1)
       total.push(preço)
     }
 
     bebida2.style.border = "none"
     bebida1.style.border = "4px solid green"
     bebidaId = bebidaid
-    checkb = check1.id
+    checkp = check1.id
     check1.classList.remove("d-none")
     check2.classList.add("d-none")
 
-  }
+  } 
 
   if (prato != "" && dessert != "" && bebida != "") {
     button.removeAttribute("disabled")
@@ -138,6 +140,8 @@ function openModal() {
   let precob = document.querySelector(`#preço${bebidaId.match(/\d+/)[0]}`).textContent
   let precod = document.querySelector(`#preço${dessertId.match(/\d+/)[0]}`).textContent
   let  TOTAL = 0 
+  username = window.prompt("digite seu nome")
+  endereco = window.prompt("digite seu endereço")
 
   for(let i = 0; i< total.length; i++) {
     TOTAL += parseFloat(total[i])
@@ -147,7 +151,9 @@ function openModal() {
   `<div style='display: flex; justify-content: space-between;'><p>${prato}<p><p>${precop}</p></div>
    <div style='display: flex; justify-content: space-between;'><p>${bebida}<p><p>${precob}</p></div> 
    <div style='display: flex; justify-content: space-between;'><p>${dessert}<p><p>${precod}</p></div>
-   <div style='display: flex; justify-content: space-between;'><p>Total<p><p>R$${TOTAL}</p></div>`
+   <div style='display: flex; justify-content: space-between;'><p>Total<p><p>R$${TOTAL}</p></div>
+   <div style='display: flex; justify-content: space-between;'><p>Nome<p><p>${username}</p></div>
+   <div style='display: flex; justify-content: space-between;'><p>Endereço:<p><p>${endereco}</p></div>`
 
 
   modal.classList.remove("d-none")

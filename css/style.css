@@ -136,9 +136,9 @@ footer {
     flex-direction: column;
     background-color: #50D074;
     width: 377px;
-    height: 353px;
     border-radius: 9px;
     color: #ffff;
+    flex-wrap: wrap;
 }
 
 .modal h1 {

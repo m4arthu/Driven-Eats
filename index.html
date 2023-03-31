@@ -219,14 +219,14 @@
 
     <div id="confirm-menu" class="d-none">
         <div class="modal-background d-none">
-            <div class="modal">
+            <div class="modal" data-test="confirm-order-modal">
                 <h1>Confirme seu pedido</h1>
                 <div class="modal-container">
                     
                 </div>  
                 <div id="modal-buttons">
-                    <button id="confirm-button" onclick="send()"><p>Tudo certo, pode pedir</p></button>
-                    <button onclick="closeModal()"><p>Cancelar</p></button>
+                    <button data-test="confirm-order-btn" id="confirm-button" onclick="send()"><p>Tudo certo, pode pedir</p></button>
+                    <button data-test="cancel-order-btn" onclick="closeModal()"><p>Cancelar</p></button>
                 </div> 
             </div>
         </div>
