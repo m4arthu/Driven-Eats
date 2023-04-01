@@ -12,7 +12,6 @@ var username
 var endereco
 
 function seletionPratos(id) {
-  let button = document.getElementById("checkout-button")
   let prato1 = document.getElementById(id)
   let pratoid = prato1.id
   let numid = pratoid.match(/\d+/)[0]
@@ -45,15 +44,10 @@ function seletionPratos(id) {
 
   } 
 
-  if (prato != "" && dessert != "" && bebida != "") {
-    button.removeAttribute("disabled")
-    button.style.backgroundColor = "green"
-    button.innerHTML = "<p>Fechar pedido</p>"
-  }
+  verifySelection()
 }
 
 function selectionDessert(id) {
-  let button = document.getElementById("checkout-button")
   let dessert1 = document.getElementById(id)
   let dessertid = dessert1.id
   let numid = dessertid.match(/\d+/)[0]
@@ -86,14 +80,9 @@ function selectionDessert(id) {
 
   } 
 
-  if (prato != "" && dessert != "" && bebida != "") {
-    button.removeAttribute("disabled")
-    button.style.backgroundColor = "green"
-    button.innerHTML = "<p>Fechar pedido</p>"
-  }
+  verifySelection()
 }
 function selectionBebidas(id) {
-  let button = document.getElementById("checkout-button")
   let bebida1 = document.getElementById(id)
   let bebidaid = bebida1.id
   let numid = bebidaid.match(/\d+/)[0]
@@ -126,7 +115,13 @@ function selectionBebidas(id) {
 
   } 
 
-  if (prato != "" && dessert != "" && bebida != "") {
+  verifySelection()
+}
+
+
+function verifySelection() {
+  let button = document.getElementById("checkout-button")
+  if (prato !== "" && dessert !== "" && bebida !== "") {
     button.removeAttribute("disabled")
     button.style.backgroundColor = "green"
     button.innerHTML = "<p>Fechar pedido</p>"
