@@ -26,7 +26,7 @@ function seletionPratos(id) {
     checkp = check1.id
     prato1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else if(pratoId !== prato1 && checkp !== check1.id){
+  } else if(pratoId != prato1 && checkp != check1.id){
     let prato2 = document.getElementById(pratoId)
     let check2 = document.getElementById(checkp)
 
@@ -62,7 +62,7 @@ function selectionDessert(id) {
     checkd = check1.id
     dessert1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else if(dessertId !== dessert1 && checkd !== check1.id){
+  } else if(dessertId != dessert1 && checkd != check1.id){
     let dessert2 = document.getElementById(dessertId)
     let check2 = document.getElementById(checkd)
 
@@ -97,7 +97,7 @@ function selectionBebidas(id) {
     checkb = check1.id
     bebida1.style.border = "4px solid green"
     check1.classList.remove("d-none")
-  } else if(bebidaId !== bebida1 && checkb !== check1.id){
+  } else if(bebidaId != bebida1 && checkb != check1.id){
     let bebida2 = document.getElementById(bebidaId)
     let check2 = document.getElementById(checkb)
 
