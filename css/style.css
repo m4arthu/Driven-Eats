@@ -1,8 +1,16 @@
 * {
     box-sizing: border-box;
 }
+.item {
+    position: relative;
+}
 
-
+.item-check {
+    border-radius: 100%; 
+    position: absolute;
+     width: 20px; 
+     left: 120px
+}
 .d-none {
     display:none;
 }
@@ -169,6 +177,7 @@ footer {
 }
 
 #confirm-button {
+    border: inherit;
     color: #50D074;
     background-color: #ffff;
     height: 52px;
