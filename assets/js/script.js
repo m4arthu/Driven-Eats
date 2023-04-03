@@ -125,6 +125,8 @@ function verifySelection() {
     button.removeAttribute("disabled")
     button.style.backgroundColor = "green"
     button.innerHTML = "<p>Fechar pedido</p>"
+  } else {
+    button.style.ba
   }
 }
 
