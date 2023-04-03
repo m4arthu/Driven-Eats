@@ -125,7 +125,8 @@ function verifySelection() {
     button.style.backgroundColor = "green"
     button.innerHTML = "<p>Fechar pedido</p>"
   } else {
-    button.style.ba
+    button.style.backgroundColor = "#E5E5E5"
+    button.innerHTML = "<p>Selecione  3 items para fechar o pedido</p>"
   }
 }
 
