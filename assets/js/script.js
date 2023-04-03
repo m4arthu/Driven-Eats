@@ -167,8 +167,8 @@ function send() {
 
   var celular = "5599984592679";
 
-  var texto = `Olá gostaria de fazer um pedido: \n -prato: ${prato}  \n -bebida: ${bebida} \n -sobremesa: ${dessert} \n -total: R$${TOTAL.toFixed(2)} \n\n
-  -endereço:$`
+  var texto = `Olá gostaria de fazer um pedido: \n -prato: ${prato}  \n -bebida: ${bebida} \n -sobremesa: ${dessert} \n -total: R$${TOTAL.toFixed(2)} \n
+  -nome: ${username} \n -endereço: ${endereco}`
 
   texto = window.encodeURIComponent(texto);
 
